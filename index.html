@@ -1,0 +1,478 @@
+<!Doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Quicksand:wght@600&family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <title>Safe Route</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <!-- Favicon -->
+        <link rel="icon" href="/images/favicon.png">
+        
+    </head>
+
+    <body class="section-padding-80">
+        <!------------------ navbar ------------------------------>
+        
+        <!-- -----------adding offcanvas navbar----------- -->
+        <header class="header-area">
+                <div class="main-header-area">
+                    <div class="classy-nav-container breakpoint-off">
+                        <div class="container">
+                            <nav class="navbar navbar-expand-lg  navbar-dark  bg-transparent" >
+                                <img src="/images/logo3.png" alt="error" height="170px" style="padding-bottom: 50px;" width="auto">
+                                <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon h-4 w-4 "></span>
+                                </button>
+                                <div class="container">
+
+                                <!-- ----------------sidebar------------------------ -->
+                                
+                                <div class="sidebar offcanvas offcanvas-start text-white border-bottom" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+                                    <div class="offcanvas-header">
+                        
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: black;">SafeRoute</h5>
+                                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    </div>
+                                    <!-- ------------------sidebar body---------------- -->
+                                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0 bg-white" >
+                                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                                        <li class="nav-item mx-2">
+                                        <a class="nav-link active" aria-current="page" href="index.html" style="color: black; font-size:30px ">Home</a>
+                                        </li>
+                                        <li class="nav-item mx-2">
+                                        <a class="nav-link" href="/pages/about.html" target="_blank" style="color: black; font-size:30px">About</a>
+                                        </li>
+                                        <li class="nav-item mx-2">
+                                            <a class="nav-link" href="/maps/map.html" target="_blank" style="color: black; font-size:30px">Map</a>
+                                        </li>
+                                        <li class="nav-item mx-2">
+                                            <a class="nav-link" href="/pages/contact.html" target="_blank" style="color: black; font-size:30px">Contact Us</a>
+                                        </li>
+                                        
+                                    </ul>
+                                    <!-- -----------Login/signup-------------------- -->
+                                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3" style="font-size:20px">
+                                        <div class="mx-2">
+                                            <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal" style="font-size:20px">Login</button>
+                                            <button class="btn btn-success" data-toggle="modal" data-target="#signupModal" style="font-size:20px">Sign Up</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+        </header>
+
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login to SafeRoute </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SignUp Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Get an SafeRoute Account</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group">
+                                <label for="cexampleInputPassword1">Confirm Password</label>
+                                <input type="password" class="form-control" id="cexampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- ---------------------------------------Content:-------------------------------- -->
+        <div class="container col-md-12" >
+                <div class="container">
+                    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/map-8979813-7374735.png" alt="error" height="325px" width="auto" align=right>
+                </div>
+                <div >
+                    <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 60px;">SafeRoute</h1>
+                    <p style="font-size: 25px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align:justify;">SafeRoute is a web-based platform that provides users with an optimized route that balances speed and safety. It considers a range of factors that affect road safety, including accident frequency, traffic lights, and road 
+                        surface condition.</p>
+                    <button type="button" class="btn btn-primary">Learn more</button>
+                </div>
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <!-- ----------------------------------------------Our feature--------------------------------------- -->
+        <h2 style="color: black; text-align:center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 60px; ">Our Features</h2>
+        <main style="width: 90vw;">
+            
+        <!-- blog -->
+        
+        <!-- ----------feature1-------------------- -->
+            <br>
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.freepik.com/free-photo/safety-first-sign-nature_23-2149919552.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1712275200&semt=ais" height="250px" width="auto" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Safety First,  <br>Speed Second</h5>
+                <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+        <!-- ----------feature2-------------------- -->
+            <div class="card" style="width: 18rem; margin-left: 20px;">
+                <img src="https://img.freepik.com/free-psd/world-tourism-day-3d-rendering-background_23-2150611206.jpg" height="250px" width="auto" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Smarter Travel </h5><br>
+                <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+        <!-- ----------feature3-------------------- -->
+            <div class="card" style="width: 18rem; margin-left: 20px;">
+                <img src="https://www.revechat.com/wp-content/uploads/2022/02/customer-engagement-metrics.jpg"  height="250px" width="auto" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title " style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">User Engagement</h5><br>
+                <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+        <!-- ----------feature4-------------------- -->
+            <div class="card" style="width: 18rem; margin-left: 20px;margin-right: 20px;">
+                <img src="https://www.shutterstock.com/image-vector/two-first-aid-doctors-carry-600nw-1049444345.jpg" height="250px" width="auto" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Open-Source Accident Data</h5><br>
+                <a href="#" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+        </main>
+        <br>
+        <br>
+
+
+    <!------------------ ------------------------- Our Pricing Table--------------------------------------------- -->
+        <h2 style="color: black; text-align:center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 60px;">Choose Your Plan</h2>
+        <br>
+        <div class=" container-fluid pricingTable pt-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="inner d-flex tabsBtnHolder" style="align-items: center;">
+                            <ul>
+                                <li><p id="monthly" class="active" style="font-size: 1.2rem; align-items:center">Monthly</p></li>
+                                <li><p id="yearly" class="" style="font-size: 1.2rem; text-align:center;">Yearly</p></li>
+
+                                <li class="indicator"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row monthlyPriceList animated">
+                    <div class="col-md-4">
+                        <div class="inner holder">
+                            <div class="hdng">
+                                <p>Starter Plan</p>
+                            </div>
+                            <div class="price mt-5">
+                                <p><b>$3</b><span> / mo</span></p>
+                            </div>
+                            <div class="info">
+                                <p>Unlimited Route Recommendations</i></p>
+                                <p>Full Map Access For 5 Countries</p>
+                                <p>Vehicle Recommendation</p>
+                                <p>No Trip Analysis</p>
+                            </div>
+                            <div class="btn">
+                                <a href="/pages/payment.html" class="readon" target="_blank" style="text-decoration: none;">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="inner holder active">
+                            <div class="hdng">
+                                <p>Basic Plan</p>
+                            </div>
+                            <div class="price mt-5">
+                                <p><b>$0</b><span> / mo</span></p>
+                            </div>
+                            <div class="info">
+                                <p>Unlimited Route Recommendations</p>
+                                <p>Full Map Access For 1 Country</p>
+                                <p>No Vehicle Recommendation </p>
+                                <p>No Trip Analysis</p>
+                            </div>
+                            <div class="btn">
+                                <a href="#" class="readon"style="text-decoration: none;">Use Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="inner holder">
+                            <div class="hdng">
+                                <p>Business Plan</p>
+                            </div>
+                            <div class="price mt-5">
+                                <p><b>$9</b><span> / mo</span></p>
+                            </div>
+                            <div class="info">
+                                <p>Unlimited Route Recommendations</p>
+                                <p>Full Map Access Across World Wide</p>
+                                <p>Vehicle Recommendation</p>
+                                <p>Trip Analysis</p>
+                            </div>
+                            <div class="btn"> 
+                                <a href="/pages/payment.html" class="readon" target="_blank"style="text-decoration: none;">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row yearlyPriceList d-none animated">
+                    <div class="col-md-4">
+                        <div class="inner holder">
+                            <div class="hdng">
+                                <p>Starter Plan</p>
+                            </div>
+                            <div class="price mt-5">
+                                <p><b>$6</b><span> / mo</span></p>
+                            </div>
+                            <div class="info">
+                                <p></p>
+                                <p>Backlink Analysis</p>
+                                <p>Organic Trafic 215%</p>
+                                <p>10 Free Optimization</p>
+                                <p>24/7 Support</p>
+                            </div>
+                            <div class="btn">
+                                <a href="/pages/payment.html" class="readon" target="_blank" style="text-decoration: none;">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="inner holder active">
+                            <div class="hdng">
+                                <p>Basic Plan</p>
+                            </div>
+                            <div class="price mt-5">
+                                <p><b>$2</b><span> / mo</span></p>
+                            </div>
+                            <div class="info">
+                                <p>Increase Traffic 130%</p>
+                                <p>Backlink Analysis</p>
+                                <p>Organic Trafic 215%</p>
+                                <p>10 Free Optimization</p>
+                                <p>24/7 Support</p>
+                            </div>
+                            <div class="btn">
+                                <a href="/pages/payment.html" class="readon" target="_blank" style="text-decoration: none;">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="inner holder">
+                            <div class="hdng">
+                                <p>Business Plan</p>
+                            </div>
+                            <div class="price mt-5">
+                                <p><b>$12</b><span> / mo</span></p>
+                            </div>
+                            <div class="info">
+                                <p>Increase Traffic 130%</p>
+                                <p>Backlink Analysis</p>
+                                <p>Organic Trafic 215%</p>
+                                <p>10 Free Optimization</p>
+                                <p>24/7 Support</p>
+                            </div>
+                            <div class="btn">
+                                <a href="/pages/payment.html" class="readon" target="_blank" style="text-decoration: none;">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <!-- --------------------------------------FAQ section----------------------------  -->
+
+        <h2 style="color: black; text-align:center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 60px;">FAQ</h2>
+
+        <!-- FAQ 1 - Bootstrap Brain Component -->
+        <section class=" py-3 py-md-5" style="color: black; text-align:center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <div class="container">
+            <div class="row gy-5 gy-lg-0 align-items-lg-center">
+                <div class="col-12 col-lg-6">
+                <img class="img-fluid rounded" loading="lazy" src="https://img.freepik.com/premium-vector/illustration-icon-3d-frequently-asked-questions-faq-banner-computer_135323-19.jpg" alt="How can we help you?">
+                </div>
+                <div class="col-12 col-lg-6">
+                <div class="row justify-content-xl-end">
+                    <div class="col-12 col-xl-11">
+                    <h2 class="h1 mb-3">How can we help you?</h2>
+                    <p class="lead fs-4 text-secondary mb-5">We hope you have found an answer to your question. If you need any help, please search your query on our Support Center or contact us via email.</p>
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How Do I Change My Billing Information?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            <p>To change your billing information, please follow these steps:</p>
+                            <ul>
+                                <li>Go to our website and sign in to your account.</li>
+                                <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                                <li>Under the "Billing Information" section, click on "Edit."</li>
+                                <li>Make your changes and click on "Save."</li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How Does Payment System Work?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            A payment system is a way to transfer money from one person or organization to another. It is a complex process that involves many different parties, including banks, credit card companies, and merchants.
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How Do I Delete My Account?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>To cancel your account, please follow these steps:</p>
+                                <ul>
+                                    <li>Go to our website and sign in to your account.</li>
+                                    <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                                    <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
+                                    <li>Enter your password and click on "Cancel Account."</li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How Do I Cancel My Account?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>To cancel your account, please follow these steps:</p>
+                                <ul>
+                                    <li>Go to our website and sign in to your account.</li>
+                                    <li>Click on your profile picture in the top right corner of the page and select "Account Settings."</li>
+                                    <li>Scroll to the bottom of the page and click on "Cancel Account."</li>
+                                    <li>Enter your password and click on "Cancel Account."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+
+
+
+        <footer class="container" style="text-align: center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <p style="font-size: large;">©Avik's 2024 SafeRoute, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer> 
+
+        <script src="scripts/script.js"></script>
+        <script src="scripts/script2.js"></script>
+        <script src="scripts/script2.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        
+    </body>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/teams/team-1/assets/css/team-1.css">
+        <!-- -------------font-awesome---------- -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        <!-- Favicon -->
+        <link rel="icon" href="https://www.iconarchive.com/download/i111672/fa-team/fontawesome-regular/FontAwesome-Regular-Address-Book.1024.png"></i>
+
+        <!-- Add any additional stylesheets or scripts here -->
+        <style>
+            .card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .card-body {
+                flex: 1;
+            }
+    
+            .card img {
+                width: 100%;
+                height: 250px; /* Set a fixed height for the images */
+                object-fit: cover; /* Ensure the image covers the area without stretching */
+            }
+    
+            .social-icons {
+                padding: 10px 0;
+                display: flex;
+                justify-content: center;
+            }
+    
+            .social-icons a {
+                margin: 0 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <!------------------ navbar ------------------------------>
+    
+        <!-- -----------adding offcanvas navbar----------- -->
+        <header class="header-area">
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg  navbar-dark  bg-transparent" >
+                        <img src="/images/logo3.png" alt="error" height="170px" style="padding-bottom: 50px;" width="auto">
+                        <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon h-4 w-4 "></span>
+                        </button>
+                        <div class="container">
+
+                        <!-- ----------------sidebar------------------------ -->
+                        
+                        <div class="sidebar offcanvas offcanvas-start text-white border-bottom" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+                            <div class="offcanvas-header">
+                
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: black;">SafeRoute</h5>
+                            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <!-- ------------------sidebar body---------------- -->
+                            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0 bg-white" >
+                            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                                <li class="nav-item mx-2">
+                                <a class="nav-link active" aria-current="page" href="index.html" style="color: black; font-size:30px ">Home</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                <a class="nav-link" href="/pages/about.html" target="_blank" style="color: black; font-size:30px">About</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link" href="/maps/map.html" target="_blank" style="color: black; font-size:30px">Map</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link" href="/pages/contact.html" target="_blank" style="color: black; font-size:30px">Contact Us</a>
+                                </li>
+                                
+                            </ul>
+                            <!-- -----------Login/signup-------------------- -->
+                            <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3" style="font-size:20px">
+                                <div class="mx-2">
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal" style="font-size:20px">Login</button>
+                                    <button class="btn btn-success" data-toggle="modal" data-target="#signupModal" style="font-size:20px">Sign Up</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </header>
+
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login to SafeRoute </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SignUp Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Get an SafeRoute Account</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group">
+                                <label for="cexampleInputPassword1">Confirm Password</label>
+                                <input type="password" class="form-control" id="cexampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Account</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Team 1 - Bootstrap Brain Component -->
+        <section class=" py-3 py-md-5 py-xl-8">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                    <h2 class="mb-4 display-5 text-center" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 60px;">Our Team</h2>
+                    <p class="text-secondary mb-5 text-center lead fs-4">We are a group of innovative, prolific and proficient teams. You will love to collaborate with us.</p>
+                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container overflow-hidden">
+                <div class="row gy-4 gy-lg-0 gx-xxl-5">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="/images/my_image.jpeg" height="50vh" alt="Flora Nyra">
+                                    <figcaption class="m-0 p-4">
+                                    <h4 class="mb-1">Avik Banerjee</h4>
+                                    <p class="text-secondary mb-0">Frontend Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- ---------------icon---------------- -->
+                            <div class="social-icons" style="font-size: 15px;">
+                                <a href="https://www.facebook.com/profile.php?id=100087391891883&mibextid=ZbWKwL"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998; padding-left:10px"></i></a>
+                                <a href="https://instagram.com/neon_avik?igshid=ZmZhODViOGI="><i class="fab fa-instagram fa-2x" style="color: #ac2bac; padding-left:10px"></i></a>
+                                <a href="https://twitter.com/neon_avik"><i class="fab fa-twitter fa-2x" style="color: #55acee; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-github fa-2x" style="color: #333333; padding-left:10px"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="/images/my_image_2.jpeg" height="50vh"  alt="Flora Nyra">
+                                    <figcaption class="m-0 p-4">
+                                    <h4 class="mb-1">Srijan Mukherjee</h4>
+                                    <p class="text-secondary mb-0">Content Writter</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- ---------------icon---------------- -->
+                            <div class="social-icons" style="font-size: 15px;">
+                                <a href="https://www.facebook.com/profile.php?id=100087391891883&mibextid=ZbWKwL"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998; padding-left:10px"></i></a>
+                                <a href="https://instagram.com/neon_avik?igshid=ZmZhODViOGI="><i class="fab fa-instagram fa-2x" style="color: #ac2bac; padding-left:10px"></i></a>
+                                <a href="https://twitter.com/neon_avik"><i class="fab fa-twitter fa-2x" style="color: #55acee; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-github fa-2x" style="color: #333333; padding-left:10px"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" >
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0" >
+                                    <img class="img-fluid" loading="lazy" src="/images/my_image_3.jpeg" height="50vh" alt="Flora Nyra">
+                                    <figcaption class="m-0 p-4">
+                                    <h4 class="mb-1">Suchetana Mukherjee</h4>
+                                    <p class="text-secondary mb-0">Frontend Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- ---------------icon---------------- -->
+                            <div class="social-icons" style="font-size: 15px;">
+                                <a href="https://www.facebook.com/profile.php?id=100087391891883&mibextid=ZbWKwL"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998; padding-left:10px"></i></a>
+                                <a href="https://instagram.com/neon_avik?igshid=ZmZhODViOGI="><i class="fab fa-instagram fa-2x" style="color: #ac2bac; padding-left:10px"></i></a>
+                                <a href="https://twitter.com/neon_avik"><i class="fab fa-twitter fa-2x" style="color: #55acee; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-github fa-2x" style="color: #333333; padding-left:10px"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="/images/my_image.jpeg" height="50vh" alt="Flora Nyra">
+                                    <figcaption class="m-0 p-4">
+                                    <h4 class="mb-1">Prithwish Kundu</h4>
+                                    <p class="text-secondary mb-0">Backend Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- ---------------icon---------------- -->
+                            <div class="social-icons" style="font-size: 15px;">
+                                <a href="https://www.facebook.com/profile.php?id=100087391891883&mibextid=ZbWKwL"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998; padding-left:10px"></i></a>
+                                <a href="https://instagram.com/neon_avik?igshid=ZmZhODViOGI="><i class="fab fa-instagram fa-2x" style="color: #ac2bac; padding-left:10px"></i></a>
+                                <a href="https://twitter.com/neon_avik"><i class="fab fa-twitter fa-2x" style="color: #55acee; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-github fa-2x" style="color: #333333; padding-left:10px"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3" style="padding-top: 25px;">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="/images/my_image_3.jpeg" height="50vh" alt="Flora Nyra">
+                                    <figcaption class="m-0 p-4">
+                                    <h4 class="mb-1">Samannway Sil</h4>
+                                    <p class="text-secondary mb-0">Backend Developer</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- ---------------icon---------------- -->
+                            <div class="social-icons" style="font-size: 15px;">
+                                <a href="https://www.facebook.com/profile.php?id=100087391891883&mibextid=ZbWKwL"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998; padding-left:10px"></i></a>
+                                <a href="https://instagram.com/neon_avik?igshid=ZmZhODViOGI="><i class="fab fa-instagram fa-2x" style="color: #ac2bac; padding-left:10px"></i></a>
+                                <a href="https://twitter.com/neon_avik"><i class="fab fa-twitter fa-2x" style="color: #55acee; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-github fa-2x" style="color: #333333; padding-left:10px"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3" style="padding-top: 25px;">
+                        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+                            <div class="card-body p-0">
+                                <figure class="m-0 p-0">
+                                    <img class="img-fluid" loading="lazy" src="/images/my_image_4.jpeg" height="50vh" alt="Flora Nyra">
+                                    <figcaption class="m-0 p-4">
+                                    <h4 class="mb-1">NRD</h4>
+                                    <p class="text-secondary mb-0">Mentor</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- ---------------icon---------------- -->
+                            <div class="social-icons" style="font-size: 15px;">
+                                <a href="https://www.facebook.com/profile.php?id=100087391891883&mibextid=ZbWKwL"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998; padding-left:10px"></i></a>
+                                <a href="https://instagram.com/neon_avik?igshid=ZmZhODViOGI="><i class="fab fa-instagram fa-2x" style="color: #ac2bac; padding-left:10px"></i></a>
+                                <a href="https://twitter.com/neon_avik"><i class="fab fa-twitter fa-2x" style="color: #55acee; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca; padding-left:10px"></i></a>
+                                <a href="https://www.snapchat.com/add/prince_avik2021"><i class="fab fa-github fa-2x" style="color: #333333; padding-left:10px"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- -------------------contact form--------------------- -->
+
+        <!-- Contact 1 - Bootstrap Brain Component -->
+        <section class="bg-light py-3 py-md-5">
+            <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="mb-4 display-5 text-center" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 60px;">Contact Us</h2>
+                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                </div>
+            </div>
+            </div>
+        
+            <div class="container">
+            <div class="row justify-content-lg-center">
+                <div class="col-12 col-lg-9">
+                <div class="bg-white border rounded shadow-sm overflow-hidden">
+        
+                    <form action="#!">
+                    <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                        <div class="col-12">
+                        <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                        </div>
+                        <div class="col-12 col-md-6">
+                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                            </svg>
+                            </span>
+                            <input type="email" class="form-control" id="email" name="email" value="" required>
+                        </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                            </span>
+                            <input type="tel" class="form-control" id="phone" name="phone" value="">
+                        </div>
+                        </div>
+                        <div class="col-12">
+                        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                        <div class="col-12">
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                        </div>
+                        </div>
+                    </div>
+                    </form>
+        
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </body>
+
+</html>

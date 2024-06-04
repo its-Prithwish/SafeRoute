@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Quicksand:wght@600&family=Roboto+Slab&family=Roboto:wght@300&display=swap');
+body{
+    
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    /* background: url(images/logo2.jpg) ; */
+    /* background-color: black; */
+    /* background-blend-mode: multiply ; */
+    /* background-position: center; */
+    /* background-size: cover; */
+    overflow-x: hidden;
+    /* background-attachment: scroll; */
+    font-family: 'Roboto', sans-serif;
+
+}
+/* -------------------------navbar------------------------ */
+.navbar-nav li a{
+    position: relative;
+    display: block;
+}
+.navbar-nav li a:hover{
+    color: blue !important;
+    transform: translateY(-5px);
+}
+@media (max-width: 991px) {
+    .sidebar{
+        background-color: black;
+
+    }
+}
+
+.container .navbar-toggler span{
+    border:1px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
+    color: blue;
+}
+/* ------------------------------------slider-------------------------------- */
+.carousel-item{
+    /* height: 80vh;  */
+    /* min-height: 300px; */
+    overflow: auto;
+    /* background-size: cover; */
+}
+.carousel-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.781);
+    opacity: 0.7;
+}
+.carousel-caption{
+    bottom: 180px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.carousel-caption h5{
+    margin-bottom: 100px;
+    font-size: 120px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.carousel-caption p{
+    font-size: 60px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/*---------------------------Content------------------------*/
+#header .container img {
+    padding-bottom: 150px;
+}
+
+/* ------------------------------------features------------------------------------ */
+main{
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+}
+main .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+/* -------------------------------Pricing Table------------------------------------------------ */
+
+.readon {
+    position: relative;
+    display: inline-block !important;
+    background: blue;
+    padding: 14px 30px;
+    line-height: normal;
+    color: #ffffff !important;
+    transition: all 0.3s ease 0s;
+    border-radius: 30px;
+    text-transform: capitalize !important;
+    cursor: pointer;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+}
+.readon:hover,
+.readon:focus {
+    background: #242526;
+}
+
+.inner{
+    width:100%;
+    float:left;
+    position:relative;
+}
+
+
+
+.pricingTable .holder{
+    background: #fff;
+    box-shadow: 1px 20px 12px -15px rgba(0,0,0,0.2);
+    padding: 40px 15px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition:0.5s ease;
+}
+
+.pricingTable .holder:hover{
+    transform:translateY(-5px);
+    
+}
+
+
+
+.pricingTable .holder .hdng p{
+    font-size:28px;
+    font-weight:bold;
+    color:#242526;
+}
+
+.pricingTable .holder .img img{
+    width:70%;
+}
+
+.pricingTable .holder .price p{
+    color:blue;
+    margin-bottom:25px;    
+}
+
+.pricingTable .holder .price p b{
+    font-size:40px;
+    font-weight:bold;
+}
+
+.pricingTable .holder .price p span{
+    font-size:18px;
+}
+
+.pricingTable .holder .info p{
+    margin-bottom:15px;
+    color:#242526;
+    font-weight:14px;
+}
+
+.pricingTable .holder.active{
+    background:blue;
+}
+
+.pricingTable .holder.active .hdng p,
+.pricingTable .holder.active .price p,
+.pricingTable .holder.active .info p{
+    color:#fff;
+}
+
+.pricingTable .holder.active .readon{
+    background:#fff;
+    color:blue!important;
+}
+
+.pricingTable .holder.active .readon:hover{
+    background:#242526;
+    color:#fff!important;
+}
+
+.pricingTable .tabsBtnHolder ul{
+    float:left;
+    display:block;
+    width:100%;
+    max-width:326px;   
+    border-radius:1.6666666667rem;
+    margin:0px auto;
+    margin-bottom:40px; 
+    background:blue!important;
+    text-align:center;
+    position:relative;
+}
+
+.pricingTable .tabsBtnHolder ul li{
+    float:left;
+    width:calc(100% / 2);
+    display:inline-block;
+    transition:0.4s ease;
+}
+
+.pricingTable .tabsBtnHolder ul li p{
+    color:#fff;
+    padding:10px 15px;
+    z-index:10;
+    position:relative;
+    cursor:pointer;
+}
+
+.pricingTable .tabsBtnHolder ul li p.active{
+    color:blue !important;
+}
+
+.pricingTable .tabsBtnHolder ul li.indicator{
+    position: absolute;
+    top: 50%;
+    left: 2px; /*163px*/
+    background: #fff;
+    height: calc(100% - 4px);
+    transform: translateY(-50%);
+    border-radius: 1.5333333333rem;
+    width: 161px;
+    z-index:9
+}
+
+
+
+
+/* #header{ 
+    /* width: auto; */
+   /* min-height: 100vh; */
+   /* background-image: url("pic-3.jpg"); */
+   /* background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat; 
+}
+/* .container{ 
+   padding: 10px 10%;
+}*/
+/*.container img{
+    padding-left: 50px;
+}
+.header-text{
+    margin-top: 10%;
+    font-size: 30px;
+    color: white;
+}
+/*----------------- Added typing Writing effect----------------------- */
+/*.header-text  h1{
+    margin-top: 5%;
+    font-size:  60px;
+    width: 0ch; /*it means it will start from 0 character
+    overflow: hidden;
+    white-space: nowrap;
+    animation: text 3s steps(44) infinite;
+    border-right: 3px solid red;
+    font-style: italic;
+
+}*/
+/*@keyframes text {
+    0% {
+        width: 0ch;
+    }
+    50% {
+        width: 10ch;
+    }
+    
+}
+.header-text  h1 span{
+    color:red;
+}
+.header-text p{
+    font-size:20px;
+}
+footer p{
+    text-align: center;
+
+}
+h3{
+    color: white;
+}
+h2{
+    color: white;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 60px;
+}
+.container p{
+    color: white;
+}
+.col h3{
+    font-size: 30px;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.feature4 h3{
+    font-size: 33px;
+}
+.feature2 h3{
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.feature3 h3{
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.feature1 h3{
+    font-size: 40px;
+}
+
+.leaflet-routing-container{
+    border: 2px solid red !important;
+    color: green !important;
+} */
+/*--------------------------------contact us-----------------------------------*/
+
+/*----------------------for map interface------------------------------------*/
+
+/* Make the map full screen */
+#map {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#photo-popup img {
+    width: 100%;
+  }
+
+#search-container {
+    position: absolute;
+    top: 0rem;
+    left: 5rem;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+#search-container .col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;}
+
+#search-container input[type="text"] {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#search-container button {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-container button:hover {
+    background-color: #45a049;
+}
+
+.leaflet-left{
+    display: none;
+}
+
+.leaflet-touch .leaflet-control-layers{
+  background-color: rgb(255, 255, 255);
+}
+/* .leaflet-control-layers-toggle{
+    height: 100px;
+} */
+
+
+
+#coordinates-container {
+    position: absolute;
+    top: 20px;
+    left: 30rem;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#route-buttons-container {
+    position: absolute;
+    top: 5rem;
+    left: 20rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 1000;
+}
+#route-buttons-container button {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#route-buttons-container button:hover {
+    background-color: #0056b3;
+}

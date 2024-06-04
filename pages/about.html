@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/teams/team-1/assets/css/team-1.css">
+    <!-- -------------font-awesome---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4922/4922073.png">
+</head>
+<body>
+
+
+    <!------------------ navbar ------------------------------>
+    
+        <!-- -----------adding offcanvas navbar----------- -->
+        <header class="header-area">
+            <div class="main-header-area">
+                <div class="classy-nav-container breakpoint-off">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-lg  navbar-dark  bg-transparent" >
+                            <img src="/images/logo3.png" alt="error" height="170px" style="padding-bottom: 50px;" width="auto">
+                            <button class="navbar-toggler bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon h-4 w-4 "></span>
+                            </button>
+                            <div class="container">
+    
+                            <!-- ----------------sidebar------------------------ -->
+                            
+                            <div class="sidebar offcanvas offcanvas-start text-white border-bottom" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+                                <div class="offcanvas-header">
+                    
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: black;">SafeRoute</h5>
+                                <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <!-- ------------------sidebar body---------------- -->
+                                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0 bg-white" >
+                                <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                                    <li class="nav-item mx-2">
+                                    <a class="nav-link active" aria-current="page" href="index.html" style="color: black; font-size:30px ">Home</a>
+                                    </li>
+                                    <li class="nav-item mx-2">
+                                    <a class="nav-link" href="/pages/about.html" target="_blank" style="color: black; font-size:30px">About</a>
+                                    </li>
+                                    <li class="nav-item mx-2">
+                                        <a class="nav-link" href="/maps/map.html" target="_blank" style="color: black; font-size:30px">Map</a>
+                                    </li>
+                                    <li class="nav-item mx-2">
+                                        <a class="nav-link" href="/pages/contact.html" target="_blank" style="color: black; font-size:30px">Contact Us</a>
+                                    </li>
+                                    
+                                </ul>
+                                <!-- -----------Login/signup-------------------- -->
+                                <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3" style="font-size:20px">
+                                    <div class="mx-2">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal" style="font-size:20px">Login</button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#signupModal" style="font-size:20px">Sign Up</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            </header>
+    
+    
+            <!-- Login Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Login to SafeRoute </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- SignUp Modal -->
+            <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+            aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Get an SafeRoute Account</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cexampleInputPassword1">Confirm Password</label>
+                                    <input type="password" class="form-control" id="cexampleInputPassword1">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Create Account</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+
+
+    <h1 style="text-align: center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:50px">Introducing the Saferoute Blog</h1>
+    <p style="font-size: 25px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align:center">Welcome to the Saferoute blog! Here, we'll keep you updated with the latest news, insights, and developments related to our project. 
+    Saferoute is a web-based platform designed to provide users with optimized routes that prioritize safety
+     without compromising efficiency. Our platform considers various factors, including accident frequency, 
+     traffic lights, and road surface conditions, to ensure that users can reach their destinations safely and 
+     swiftly.</p>
+     <h1 style="text-align: center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:50px">Latest Articles</h1>
+     <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="https://media.licdn.com/dms/image/D5612AQH_UR7x00v9AQ/article-cover_image-shrink_720_1280/0/1674592061825?e=2147483647&v=beta&t=V496bouwNYZ4leHax15odQCdR6uegDgq_Zk5Wea7XTo" height="300px" width="auto" alt="Article 1 Image">
+                <div class="card-body">
+                    <h5 class="card-title">How Saferoute is Revolutionizing Road Safety</h5>
+                    <p class="card-text">Discover how Saferoute is using cutting-edge technology to revolutionize the way people navigate roads and stay safe.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="https://shipsy.io/wp-content/uploads/2021/03/Blog-115.jpg" height="300px" width="auto" alt="Article 2 Image">
+                <div class="card-body">
+                    <h5 class="card-title">The Science Behind Saferoute's Route Optimization</h5>
+                    <p class="card-text">Learn about the intricate algorithms and data analysis that power Saferoute's route optimization capabilities.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="https://miro.medium.com/v2/resize:fit:600/1*jAelDh44m8_65HJRKH_5rA.jpeg" height="300px" width="auto" alt="Article 3 Image">
+                <div class="card-body">
+                    <h5 class="card-title">Tips for Safer Driving with Saferoute</h5>
+                    <p class="card-text">Explore tips to maximize Saferoute's safety features while driving. Plan routes using real-time traffic updates to avoid congestion and hazards.Utilize speed limit alerts.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <h1 style="text-align: center;font-size:50px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Stay Updated</h1> -->
+   
+    <h2 style="text-align: center;font-size:50px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Stay tuned for more exciting content from the Saferoute team!!</h2>
+
+
+</body>
+</html>
